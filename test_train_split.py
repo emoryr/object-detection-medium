@@ -67,10 +67,10 @@ def write_data(training, testing, datadir, train_output, test_output):
     for name in training['filename']:
         try:
             # Moving xmls
-            #rd_path = os.path.join(datadir, name+'.xml')
+            rd_path = os.path.join(datadir, name+'.xml')
 
-            #wr_path = os.path.join(train_output, name+'.xml')
-            #shutil.move(rd_path, wr_path)
+            wr_path = os.path.join(train_output, name+'.xml')
+            shutil.move(rd_path, wr_path)
 
             # Moving images
             rd_path = os.path.join(datadir, name+'.'+FLAGS.image_ext)
@@ -85,10 +85,10 @@ def write_data(training, testing, datadir, train_output, test_output):
     for name in testing['filename']:
         try:
             # Moving xmls
-            #rd_path = os.path.join(datadir, name+'.xml')
+            rd_path = os.path.join(datadir, name+'.xml')
 
-            #wr_path = os.path.join(test_output, name+'.xml')
-            #shutil.move(rd_path, wr_path)
+            wr_path = os.path.join(test_output, name+'.xml')
+            shutil.move(rd_path, wr_path)
 
             # Moving images
             rd_path = os.path.join(datadir, name+'.'+FLAGS.image_ext)
